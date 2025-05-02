@@ -13,17 +13,33 @@ To write a python program to implement Depth first Search.
 7. Stop the program.
 ### Program:
 
+```
 
+# Using a Python dictionary to act as an adjacency list
+graph = {
+    '5': ['3', '7'],
+    '3': ['2', '4'],
+    '7': ['8'],
+    '2': [],
+    '4': ['8'],
+    '8': []
+}
 
+visited = set()  # Set to keep track of visited nodes of graph.
 
+def dfs(visited, graph, node):  # Function for DFS
+    if node not in visited:
+        print(node)  # Print vertically
+        visited.add(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
 
-
-
-
-
-
-
+# Driver Code
+print("Following is the Depth-First Search:")
+dfs(visited, graph, '5')
+```
 ### Output:
+![Screenshot 2025-05-02 113021](https://github.com/user-attachments/assets/57d2d1ab-5772-4aec-ab05-0079c2cca298)
 
 
 
