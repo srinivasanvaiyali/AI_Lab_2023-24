@@ -34,7 +34,7 @@ def minimax(curDepth, nodeIndex, maxTurn, scores, targetDepth):
             minimax(curDepth + 1, nodeIndex * 2 + 1, True, scores, targetDepth)
         )
 
-# Driver code
+
 scores = [3, 5, 2, 9, 12, 5, 23, 20]
 treeDepth = int(math.log(len(scores), 2))  # Calculate depth of tree: log2(8) = 3
 
